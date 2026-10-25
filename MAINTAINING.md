@@ -6,7 +6,7 @@ Este repositorio contiene guías de usuario en Markdown, sin generadores ni depe
 
 - El uso es gratuito. No anunciar licencias de pago, suscripciones, una tienda ni activaciones.
 - Diferenciar código público, compilación desde fuentes, paquete local y futuras releases. No inventar enlaces de descarga, versiones de Action o disponibilidad en Marketplace.
-- Aportaciones siempre voluntarias; añadir el enlace únicamente cuando el titular facilite su URL pública.
+- Aportaciones siempre voluntarias. El titular confirmó https://paypal.me/fr14arru el 25 de octubre de 2026. Mantener esa URL coherente en README, guías y .github/FUNDING.yml; no cambiarla sin su autorización. El botón Sponsor se configura en la rama predeterminada y puede requerir activar Sponsorships en Settings → General → Features.
 - Mantener comandos, límites y versiones contrastados con el repositorio del código. Conservar reglas, permisos mínimos y distinción request/response.
 - Las bibliotecas retienen sus licencias. Este repositorio no sustituye las atribuciones y fuentes que acompañan al software distribuido.
 

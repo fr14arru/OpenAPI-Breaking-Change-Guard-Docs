@@ -4,7 +4,7 @@ Detecta cambios incompatibles en contratos OpenAPI antes de integrar una nueva v
 
 **Código abierto y gratuito bajo MIT:** [repositorio del proyecto](https://github.com/fr14arru/openapi-guard) · [licencia del código](https://github.com/fr14arru/openapi-guard/blob/main/LICENSE) · [contribuir](https://github.com/fr14arru/openapi-guard/blob/main/CONTRIBUTING.md).
 
-No necesitas comprar una licencia, crear una cuenta de producto ni activar una suscripción. Se puede usar para proyectos personales o profesionales; las bibliotecas conservan sus licencias. Las aportaciones económicas serán voluntarias y su enlace todavía está pendiente.
+No necesitas comprar una licencia, crear una cuenta de producto ni activar una suscripción. Se puede usar para proyectos personales o profesionales; las bibliotecas conservan sus licencias. Las aportaciones económicas son opcionales y no condicionan el uso.
 
 ## Qué aporta
 
@@ -32,3 +32,9 @@ El código ya es público. La release binaria MIT y la instalación de la Action
 Abre una [issue](https://github.com/fr14arru/openapi-guard/issues) con versión, perfil, código de salida y un ejemplo mínimo anonimizado, o contribuye mediante fork y PR. No adjuntes secretos ni contratos confidenciales. Contacto público: [rayopuyi5@gmail.com](mailto:rayopuyi5@gmail.com).
 
 Este repositorio contiene documentación de usuario bajo [MIT](LICENSE). La documentación técnica y el código están en el repositorio del proyecto. El soporte es comunitario, sin SLA ni plazos garantizados.
+
+## Apoyar el proyecto
+
+Si la herramienta te resulta útil, puedes hacer una [aportación voluntaria por PayPal](https://paypal.me/fr14arru). Tú eliges el importe.
+
+El proyecto sigue siendo gratuito bajo MIT. Aportar no desbloquea funciones ni otorga prioridad o garantías de soporte.

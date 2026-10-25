@@ -26,4 +26,4 @@ No hay todavía una release binaria MIT ni una Action publicada por versión que
 2. Simplificar la Action para instalar por una referencia publicada, sin copiar el paquete a cada consumidor.
 3. Ampliar la validación de runners y PR de forks y priorizar mejoras según ejemplos de usuarios.
 
-Son prioridades, sin fechas garantizadas. Las aportaciones voluntarias no desbloquearán funciones ni serán obligatorias; el enlace está pendiente. El modelo comercial anterior queda sustituido.
+Son prioridades, sin fechas garantizadas. Las [aportaciones voluntarias por PayPal](https://paypal.me/fr14arru) no desbloquean funciones ni son obligatorias. El modelo comercial anterior queda sustituido.

@@ -36,4 +36,4 @@ Abre una [issue en el proyecto](https://github.com/fr14arru/openapi-guard/issues
 
 ## ¿Es gratuito? ¿Dónde consigo el código?
 
-Sí. El código está [disponible bajo MIT](https://github.com/fr14arru/openapi-guard), sin suscripciones ni activación, para uso personal o profesional. Las dependencias conservan sus licencias. Consulta [disponibilidad](availability.md) para distinguir compilación desde fuentes y futuras entregas binarias. Las aportaciones voluntarias serán opcionales y su enlace sigue pendiente.
+Sí. El código está [disponible bajo MIT](https://github.com/fr14arru/openapi-guard), sin suscripciones ni activación, para uso personal o profesional. Las dependencias conservan sus licencias. Consulta [disponibilidad](availability.md) para distinguir compilación desde fuentes y futuras entregas binarias. Puedes [apoyar voluntariamente el proyecto por PayPal](https://paypal.me/fr14arru). No se exige aportar para usarlo y no se ofrecen funciones ni prioridad de soporte a cambio.

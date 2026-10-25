@@ -1,30 +1,19 @@
 # Mantener la documentación pública
 
-Este repositorio se publica por separado del motor. Mantenerlo sencillo: Markdown y enlaces relativos, sin dependencias ni generadores obligatorios.
+Este repositorio contiene guías de usuario en Markdown, sin generadores ni dependencias obligatorias. El código abierto bajo MIT vive en https://github.com/fr14arru/openapi-guard; enlazar su documentación técnica en vez de duplicar Java o el portal.
 
-## Contenido permitido
+## Mantener coherencia
 
-- Presentación, guías de usuario, ejemplos sintéticos y configuración de workflows.
-- Cobertura, limitaciones, cambios publicados y contacto público aprobado.
-- Condiciones definitivas solo cuando el titular las apruebe expresamente.
+- El uso es gratuito. No anunciar licencias de pago, suscripciones, una tienda ni activaciones.
+- Diferenciar código público, compilación desde fuentes, paquete local y futuras releases. No inventar enlaces de descarga, versiones de Action o disponibilidad en Marketplace.
+- Aportaciones siempre voluntarias; añadir el enlace únicamente cuando el titular facilite su URL pública.
+- Mantener comandos, límites y versiones contrastados con el repositorio del código. Conservar reglas, permisos mínimos y distinción request/response.
+- Las bibliotecas retienen sus licencias. Este repositorio no sustituye las atribuciones y fuentes que acompañan al software distribuido.
 
-## Contenido que no se copia
+## Privacidad y contribuciones
 
-- Código Java, Javadoc o exploradores del código del motor.
-- El portal de desarrollo completo ni sus archivos generados.
-- Contratos reales, capturas privadas, secretos, datos fiscales o direcciones personales.
-- Planificación interna, borradores legales, informes internos o paquetes binarios.
+No copiar credenciales, contratos reales, datos fiscales, domicilios, documentos privados ni artefactos del equipo. Usar solo el nombre y contacto públicos aprobados. Los nuevos commits públicos deben usar una identidad de autor pública; no reescribir el historial existente sin autorización.
 
-Las fuentes de terceros que deban acompañar al software se entregan en su paquete. Este repositorio documental no las sustituye.
+Trabajar en ramas, conservar cambios ajenos y utilizar Conventional Commits en inglés. Revisar enlaces relativos, ejecutar los comandos aplicables y comprobar que el README refleja la disponibilidad real. Hacer push de la rama; el merge requiere la autorización correspondiente. No publicar sitios, releases ni binarios como parte de una actualización documental.
 
-## Antes de publicar
-
-1. Leer todos los Markdown y comprobar que no revelan información privada.
-2. Verificar enlaces locales y comandos contra la versión que se entrega.
-3. Actualizar disponibilidad y condiciones sin anunciar funciones no entregadas.
-4. Crear un repositorio remoto nuevo destinado solo a documentación.
-5. Subir únicamente este directorio, con su propio historial; no copiar .git del motor.
-6. Hacer público ese repositorio después de revisar su contenido.
-7. Usar su URL de GitHub como página del producto. El README se visualiza directamente; no hace falta GitHub Pages.
-
-Cuando se conozca la URL pública definitiva, añadirla a la tienda. No utilizar localhost ni el repositorio privado como web pública.
+Este README puede utilizarse como página pública del proyecto sin configurar hosting. La licencia de esta documentación sigue siendo MIT.

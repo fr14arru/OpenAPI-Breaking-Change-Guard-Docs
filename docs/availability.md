@@ -2,35 +2,28 @@
 
 [Inicio](../README.md)
 
-## Disponible en el producto preparado
+Actualizado el 25 de octubre de 2026.
 
-- Comparación local y salida texto, JSON y Markdown.
-- Ubicaciones del candidato y cobertura explícita.
-- Integración GitHub Actions con paquete local.
-- Anotaciones, informes y comentario opcional en la PR.
-- Política configurable para permitir rupturas intencionadas.
+## Disponible ahora
 
-## Antes de abrir la distribución pública
+- [Código fuente público bajo MIT](https://github.com/fr14arru/openapi-guard).
+- Compilación local y comparación de dos contratos OpenAPI con Java 25.
+- Informes, ubicaciones candidatas y cobertura explícita.
+- Integración GitHub Actions mediante un paquete local con anotaciones, informes y comentario opcional en la PR.
+- Política configurable para permitir rupturas demostradas sin ocultar entradas inválidas o incertidumbre.
 
-- Aprobar y publicar la licencia del producto y las condiciones de venta.
-- Generar y verificar el paquete final con atribuciones y fuentes de terceros.
-- Configurar la tienda y verificar compra, entrega y cancelación.
-- Publicar enlaces oficiales de compra, documentación y descarga.
+No hay licencias de pago, suscripciones ni claves de activación. MIT permite uso, modificación y redistribución, también comercial, conservando su aviso. Las dependencias mantienen sus propias licencias y obligaciones.
 
-No hay aún un checkout público ni una release en Marketplace. No utilices referencias de instalación remotas inventadas.
+## Instalación actual
 
-## Próximas mejoras previstas
+Sigue [primer uso](getting-started.md) para compilar y ejecutar los ejemplos. Para otro repositorio, sigue [GitHub Actions](github-actions.md): prepara el paquete local completo y añade el workflow.
 
-1. Reducir la instalación a una referencia de Action publicada y un workflow mínimo.
-2. Ampliar validaciones reales en runners y distintos tipos de pull request.
-3. Priorizar cobertura adicional según ejemplos mínimos enviados por usuarios.
+No hay todavía una release binaria MIT ni una Action publicada por versión que podamos recomendar. El ZIP de código que ofrece GitHub no contiene un JAR compilado. No uses referencias de instalación inventadas ni antiguos paquetes comerciales como entrega MIT actual.
 
-Son prioridades previstas, no un compromiso de fechas ni funcionalidades incluidas en la compra.
+## Próximos pasos
 
-## Oferta prevista
+1. Publicar una entrega MIT reproducible con ejecutable, hashes, instrucciones, atribuciones y fuentes de terceros.
+2. Simplificar la Action para instalar por una referencia publicada, sin copiar el paquete a cada consumidor.
+3. Ampliar la validación de runners y PR de forks y priorizar mejoras según ejemplos de usuarios.
 
-4,99 EUR al año por repositorio, impuestos incluidos, para uso profesional o personal. La venta y las condiciones definitivas siguen pendientes.
-
-Una licencia por repositorio es una condición de uso; el producto actual no incorpora un servidor de activación ni bloqueo técnico al vencer una suscripción.
-
-Las licencias y fuentes de bibliotecas de terceros se entregan con el paquete. Sus derechos se conservan de forma independiente de la licencia del producto.
+Son prioridades, sin fechas garantizadas. Las aportaciones voluntarias no desbloquearán funciones ni serán obligatorias; el enlace está pendiente. El modelo comercial anterior queda sustituido.

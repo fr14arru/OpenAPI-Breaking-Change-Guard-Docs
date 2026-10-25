@@ -4,7 +4,7 @@
 
 ## ¿Necesito el código fuente o compilar el proyecto?
 
-No. Se utiliza el paquete distribuido. Para la CLI local necesitas Java 25; Maven es una herramienta del desarrollo del producto.
+Actualmente sí: el código es público y la release binaria MIT sigue pendiente. Sigue [primer uso](getting-started.md) para compilar con Maven y Java 25. Una vez construido, ejecutar el JAR solo requiere Java 25.
 
 ## ¿Puedo permitir una ruptura intencionada?
 
@@ -32,8 +32,8 @@ La comparación se ejecuta en tu equipo o runner. La instalación de Java y las 
 
 ## ¿Dónde informo de un problema?
 
-Escribe a rayopuyi5@gmail.com con versión, perfil, código de salida y un ejemplo mínimo anonimizado. No incluyas tokens, secretos ni contratos privados de terceros.
+Abre una [issue en el proyecto](https://github.com/fr14arru/openapi-guard/issues), o escribe a rayopuyi5@gmail.com, con versión, perfil, código de salida y un ejemplo mínimo anonimizado. No incluyas tokens, secretos ni contratos privados de terceros.
 
-## ¿Dónde compro o descargo?
+## ¿Es gratuito? ¿Dónde consigo el código?
 
-Consulta [disponibilidad](availability.md). Los enlaces oficiales se añadirán cuando la distribución esté preparada.
+Sí. El código está [disponible bajo MIT](https://github.com/fr14arru/openapi-guard), sin suscripciones ni activación, para uso personal o profesional. Las dependencias conservan sus licencias. Consulta [disponibilidad](availability.md) para distinguir compilación desde fuentes y futuras entregas binarias. Las aportaciones voluntarias serán opcionales y su enlace sigue pendiente.

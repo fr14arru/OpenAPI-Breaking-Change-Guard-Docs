@@ -6,7 +6,16 @@ Esta guía utiliza el paquete local. La instalación desde una Action pública p
 
 ## 1. Incorporar el paquete
 
-Cuando recibas un paquete autorizado para distribución, copia la carpeta completa del paquete que contiene action.yml, guard.jar, manifest.json, scripts y las atribuciones a .guard-action en la raíz de tu repositorio.
+Primero sigue [primer uso](getting-started.md) para clonar y compilar el código público. Para preparar el paquete, necesitas además Node 20 o superior y PowerShell 7. Desde la raíz de openapi-guard, con el JAR ya construido:
+
+~~~powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-evaluation.ps1 -Destination dist/local-action
+node scripts/verify-package.mjs dist/local-action
+~~~
+
+El parámetro Bypass se limita a ese proceso; no cambia la política de ejecución del sistema. El destino debe ser nuevo: si ya existe, elige otro para no sobrescribirlo. El script conserva su nombre histórico, pero incluye MIT para el código propio y las licencias, avisos y fuentes correspondientes de terceros. No publica nada ni genera una release.
+
+Copia **todo el contenido** de dist/local-action a una carpeta .guard-action en la raíz de tu repositorio consumidor. Deben quedar .guard-action/action.yml, .guard-action/guard.jar, .guard-action/manifest.json, los scripts y las atribuciones. No copies el directorio padre con otro nivel de anidamiento.
 
 Conserva todos sus archivos. No copies únicamente el JAR ni mezcles versiones.
 

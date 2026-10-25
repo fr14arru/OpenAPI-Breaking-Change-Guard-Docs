@@ -1,39 +1,34 @@
 # OpenAPI Breaking Change Guard
 
-Detecta cambios incompatibles en tus contratos OpenAPI antes de integrar una nueva versión de tu API.
+Detecta cambios incompatibles en contratos OpenAPI antes de integrar una nueva versión de tu API. La comparación se ejecuta en tu equipo o en el runner de GitHub.
 
-OpenAPI Guard compara un contrato anterior con el contrato propuesto y explica qué cambia, por qué puede afectar a los consumidores y dónde revisar el contrato candidato. Puedes ejecutarlo en tu equipo o incorporarlo a las pull requests con GitHub Actions.
+**Código abierto y gratuito bajo MIT:** [repositorio del proyecto](https://github.com/fr14arru/openapi-guard) · [licencia del código](https://github.com/fr14arru/openapi-guard/blob/main/LICENSE) · [contribuir](https://github.com/fr14arru/openapi-guard/blob/main/CONTRIBUTING.md).
+
+No necesitas comprar una licencia, crear una cuenta de producto ni activar una suscripción. Se puede usar para proyectos personales o profesionales; las bibliotecas conservan sus licencias. Las aportaciones económicas serán voluntarias y su enlace todavía está pendiente.
 
 ## Qué aporta
 
-- Detecta operaciones eliminadas y cambios incompatibles en parámetros, cuerpos y esquemas.
-- Distingue entre peticiones y respuestas: sus reglas de compatibilidad tienen direcciones diferentes.
-- Muestra resultados en texto, JSON con sangría y Markdown.
-- Incluye ubicaciones del contrato candidato cuando están disponibles.
-- En GitHub Actions ofrece anotaciones, informes y un comentario opcional en la conversación de la PR.
-- Permite informar de rupturas intencionadas sin fallar el check, cuando el análisis está completo.
+- Operaciones eliminadas y cambios incompatibles en parámetros, cuerpos y esquemas.
+- Reglas que distinguen peticiones y respuestas.
+- Informes en texto, JSON con sangría y Markdown, con ubicaciones del candidato cuando están disponibles.
+- Anotaciones, informes y comentario opcional en la conversación de la PR.
+- Política para permitir rupturas intencionadas cuando el análisis está completo.
 
-No requiere bases de datos, Docker ni un servidor propio del usuario. La comparación se ejecuta en tu equipo o en el runner de GitHub.
+No requiere base de datos, Docker ni un servidor propio. La compatibilidad se limita al perfil analizado: no certifica toda la API.
 
 ## Empieza aquí
 
-1. [Estado y disponibilidad](docs/availability.md).
-2. [Primer uso con el paquete](docs/getting-started.md).
-3. [Configurar GitHub Actions](docs/github-actions.md).
-4. [Interpretar los resultados](docs/results.md).
-5. [Cobertura y límites](docs/coverage.md).
+1. [Primer uso: clonar, compilar y comparar](docs/getting-started.md).
+2. [Configurar GitHub Actions](docs/github-actions.md).
+3. [Interpretar los resultados](docs/results.md).
+4. [Cobertura y límites](docs/coverage.md).
+5. [Estado y próximos pasos](docs/availability.md).
 6. [Preguntas frecuentes](docs/faq.md).
 
-## Disponibilidad comercial
+El código ya es público. La release binaria MIT y la instalación de la Action por versión siguen pendientes; hoy puedes compilar desde el código y preparar un paquete local para tu workflow.
 
-La distribución pública y el checkout están en preparación. Todavía no hay un enlace público de compra o descarga ni una versión instalable desde GitHub Marketplace.
+## Colaborar
 
-La oferta prevista es **4,99 EUR al año por repositorio, impuestos incluidos**, para uso personal o profesional. Las condiciones definitivas se publicarán antes de abrir las ventas.
+Abre una [issue](https://github.com/fr14arru/openapi-guard/issues) con versión, perfil, código de salida y un ejemplo mínimo anonimizado, o contribuye mediante fork y PR. No adjuntes secretos ni contratos confidenciales. Contacto público: [rayopuyi5@gmail.com](mailto:rayopuyi5@gmail.com).
 
-## Soporte
-
-Producto de **Francisco Arce Ruiz**. Contacto: [rayopuyi5@gmail.com](mailto:rayopuyi5@gmail.com).
-
-Al informar de un problema, indica la versión, el perfil, el código de salida y un ejemplo mínimo sin datos confidenciales.
-
-Este repositorio contiene documentación de usuario. No contiene el código fuente del motor ni concede una licencia sobre él. La compatibilidad siempre se limita al perfil analizado; no certifica toda la API.
+Este repositorio contiene documentación de usuario bajo [MIT](LICENSE). La documentación técnica y el código están en el repositorio del proyecto. El soporte es comunitario, sin SLA ni plazos garantizados.

@@ -2,52 +2,59 @@
 
 [Inicio](../README.md) · [Disponibilidad](availability.md)
 
-Esta guía describe el paquete preparado para distribución. Su descarga pública sigue pendiente; no necesitas acceso al repositorio privado del motor. No hay que compilar el producto.
+Hoy puedes utilizar el código público y compilarlo. No hay todavía un ejecutable MIT publicado para descargar directamente. La comparación no necesita cuentas de producto ni infraestructura propia.
 
-## Requisitos locales
+## Requisitos para compilar
 
-- Java 25; Amazon Corretto 25 es la distribución de referencia.
-- Dos contratos OpenAPI completos en YAML o JSON, guardados como UTF-8.
-- Windows es el entorno verificado. Otros sistemas siguen pendientes de validación de extremo a extremo.
+- Git.
+- Amazon Corretto Java 25, sin funcionalidades preview.
+- Apache Maven 3.10.0. Se recomienda mvnd para acelerar compilaciones locales.
+- Windows es el entorno verificado; otros sistemas siguen pendientes de validación de extremo a extremo.
 
-## Ejecutar una comparación
+Comprueba `java -version` y `mvn -version`: Maven debe utilizar el JDK 25. El IDE es opcional.
 
-1. Obtén el ZIP a través del canal oficial cuando esté disponible.
-2. Extrae la carpeta completa. Conserva licencias, atribuciones y fuentes de terceros junto al ejecutable.
-3. Abre una terminal en la carpeta extraída.
-4. Comprueba Java:
+## Clonar y compilar
 
-~~~powershell
-java -version
-~~~
-
-5. Ejecuta el ejemplo incompatible incluido:
+Desde una terminal en el directorio donde quieras guardar el proyecto:
 
 ~~~powershell
-java -jar guard.jar --profile=full --format=text examples/base.yaml examples/breaking.yaml
+git clone https://github.com/fr14arru/openapi-guard.git
+cd openapi-guard
+mvn clean verify
 ~~~
 
-Ese ejemplo devuelve código 1 porque contiene una ruptura deliberada. No significa que la herramienta se haya averiado.
+Si ya utilizas mvnd, puedes sustituir el último comando por `mvnd clean verify`. La primera compilación necesita obtener las dependencias de Maven. No necesitas Node para compilar el motor Java.
 
-Para usar contratos propios, sustituye estas rutas ilustrativas por archivos que existan:
+## Ejecutar los ejemplos
+
+Desde la raíz del proyecto compilado:
 
 ~~~powershell
-java -jar guard.jar --profile=full --format=text --baseline="C:/Mis contratos/anterior.yaml" --candidate="C:/Mis contratos/nuevo.yaml"
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --profile=full --format=text examples/catalog/base.yaml examples/catalog/compatible.yaml
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --profile=full --format=text examples/catalog/base.yaml examples/catalog/breaking.yaml
 ~~~
 
-Baseline es la versión anterior. Candidate es la nueva versión que estás revisando.
+La primera comparación devuelve código 0. La segunda devuelve 1 porque contiene rupturas deliberadas: ese resultado es correcto. Usa siempre `--profile=full` para solicitar toda la cobertura implementada; el perfil predeterminado histórico es más reducido.
 
-## Guardar y automatizar
+## Comparar contratos propios
+
+Sustituye las rutas ilustrativas por dos documentos OpenAPI completos que existan, en YAML o JSON UTF-8:
 
 ~~~powershell
-java -jar guard.jar --profile=full --format=json --output=reports/report.json --baseline=anterior.yaml --candidate=nuevo.yaml
-java -jar guard.jar --profile=full --format=markdown --output=reports/report.md --baseline=anterior.yaml --candidate=nuevo.yaml
-java -jar guard.jar --help
-java -jar guard.jar --list-profiles
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --profile=full --format=text --baseline="C:/Mis contratos/anterior.yaml" --candidate="C:/Mis contratos/nuevo.yaml"
 ~~~
 
-Los archivos de salida existentes se reemplazan. No elijas un archivo que quieras conservar como destino del informe.
+Baseline es la versión anterior. Candidate es la nueva versión que estás revisando. Consulta los [límites](coverage.md), incluidos los de referencias externas.
 
-Utiliza siempre --profile=full para solicitar toda la cobertura implementada. El perfil predeterminado histórico es más reducido. Consulta [códigos y resultados](results.md).
+## Guardar el informe
 
-No necesitas Maven, IntelliJ ni un script PowerShell para ejecutar el JAR.
+~~~powershell
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --profile=full --format=json --output=reports/report.json examples/catalog/base.yaml examples/catalog/breaking.yaml
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --profile=full --format=markdown --output=reports/report.md examples/catalog/base.yaml examples/catalog/breaking.yaml
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --help
+java -jar target/openapi-breaking-change-guard-0.1.0-SNAPSHOT.jar --list-profiles
+~~~
+
+Los comandos incompatibles conservan el código 1 aunque guarden el informe. Los archivos de salida existentes se reemplazan: no elijas un archivo que quieras conservar. Ver [resultados y códigos](results.md).
+
+Una vez construido, ejecutar el JAR solo necesita Java 25. Si vas a redistribuir el ejecutable o usarlo en otro repositorio, prepara el paquete completo con licencia, avisos y fuentes de terceros siguiendo [GitHub Actions](github-actions.md).
